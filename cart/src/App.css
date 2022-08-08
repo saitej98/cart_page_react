@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+/* header */
+.header {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: space-between;
+  background-color: #61dafb;
+  padding:0px 20px 0px 20px;
+}
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: underline;
+}
+.count{
+  margin-top:1.5% ;
+}
+.count>a{
+  margin-left: 10px;
+}
