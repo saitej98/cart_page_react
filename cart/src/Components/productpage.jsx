@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-function productpage(props) {
+function Productpage(props) {
   const { cartItems, products, onAdd, onRemove } = props;
   return (
     <div className="block col-2">
@@ -20,4 +20,4 @@ function productpage(props) {
   );
 }
 
-export default productpage;
+export default Productpage;

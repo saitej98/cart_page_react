@@ -1,30 +1,25 @@
 import React from "react";
 
 function Product(props) {
-  const { item, product, onAdd, onRemove } = [props];
+  const { item, product, onAdd, onRemove } = props;
   return (
     <div className="card">
-      <img src={product.image} alt={product.image} className="small" />
+      <img className="small" src={product.image} alt={product.name} />
       <h3>{product.name}</h3>
-      <div>Rs.{product.price}</div>
+      <div>${product.price}</div>
       <div>
         {item ? (
           <div>
             <button onClick={() => onRemove(item)} className="remove">
               -
             </button>
-            <button onclick={() => onAdd(item)} className="add">
+            <span className="p-1">{item.qty}</span>
+            <button onClick={() => onAdd(item)} className="add">
               +
             </button>
           </div>
         ) : (
-          <button
-            onclick={() => {
-              onAdd(product);
-            }}
-          >
-            Add to Cart
-          </button>
+          <button onClick={() => onAdd(product)}>Add To Cart</button>
         )}
       </div>
     </div>
